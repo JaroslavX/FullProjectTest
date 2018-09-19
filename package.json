@@ -25,6 +25,7 @@
   "author": "Yaroslav Borovets",
   "license": "MIT",
   "dependencies": {
+    "raven": "^2.6.4",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {

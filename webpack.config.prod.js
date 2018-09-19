@@ -49,7 +49,7 @@ export default {
       inject: true,
       // Properties you define here are available in index.html
       // using htmlWebpackPlugin.options.varName
-      trackJSToken: '43ad216f57d94259968435894490a5c7'
+      SentryEnable: true
     }),
 
     // Eliminate duplicate packages when generating bundle
@@ -59,9 +59,15 @@ export default {
     new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
-    loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
+    loaders: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['babel']
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('css?sourceMap')
+      }
     ]
   }
 };
